@@ -79,15 +79,15 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                    Invoicing
                 </div>
 
                 <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                    <a href="laravel.dev">Documentation</a>
+                    <a href="laravel.dev">IWDS</a>
+                    <a href="{{ url('/dashboard') }}">Dashboard</a>
+                    <a href="laravel.dev">Staff</a>
+                    <a href="laravel.dev">GitHub</a>
                 </div>
             </div>
         </div>

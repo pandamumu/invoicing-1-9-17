@@ -15,6 +15,18 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/dashboard', function () {
+    return view('pages.dashboard');
+})->middleware('auth');
+
+Route::get('/newinvoice', function () {
+    return view('pages.new-invoice');
+})->middleware('auth');
+
+
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
+
+Route::get('/logout', 'HomeController@index');

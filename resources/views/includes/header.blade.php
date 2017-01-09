@@ -16,11 +16,13 @@
         <div class="main-menu">
             <nav>
                 <ul>
-                    <li><a href="#"><i class="fa fa-pie-chart" aria-hidden="true"></i> Dashboard</a></li>
+                    <li><a href="{{ url('/dashboard') }}"><i class="fa fa-pie-chart" aria-hidden="true"></i> Dashboard</a></li>
                     <li>
-                        <a href="#" class="fa-ico"><i class="fa fa-file-text-o" aria-hidden="true"></i> Invoices</a>
+                        <a href="{{ url('/newinvoice') }}" class="fa-ico"><i class="fa fa-file-text-o" aria-hidden="true"></i> New Invoices</a>
                     </li>
                     <li><a href="#"><i class="fa fa-file-o" aria-hidden="true"></i> Estimates</a></li>
+
+                    <li><a href="{{ URL::to('logout') }}"><i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a></li>
                 </ul>
             </nav>
         </div>
