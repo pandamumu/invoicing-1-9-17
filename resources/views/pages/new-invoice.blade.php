@@ -15,14 +15,14 @@
                 <a href="#" class="btn btn-primary toggle-back">manage invoices</a>
                 <h1>New Invoice</h1>
                 <div class="action-holder">
-                    <select class="client-selection">
-                        <option value="1">John Doe</option>
-                        <option value="1">Luke Moonstar</option>
-                        <option value="1">Adam Drake</option>
-                    </select>
+
                     <a href="#" class="btn btn-primary">preview</a>
                     <a href="#" class="btn btn-secondary">send</a>
+
+
                 </div>
+
+
             </div>
         </div>
     </header>
@@ -44,6 +44,11 @@
                                 </div>
                                 <div class="col-md-4 col-lg-3">
                                     <div class="field-holder">
+                                        <label>Client</label>
+                                        <select>
+                                            <option value="1">USSR</option>
+                                            <option value="1">JAPAN</option>
+                                        </select>
                                         <label>Currency</label>
                                         <select>
                                             <option value="1">Euro-EUR</option>
@@ -83,10 +88,6 @@ London W1W 7FE
                                         <select>
                                             <option value="1">Due on Receipt</option>
                                         </select>
-                                    </div>
-                                    <div class="field-holder">
-                                        <label>Purchase Order Number</label>
-                                        <input type="text">
                                     </div>
                                 </div>
                             </div>
@@ -142,10 +143,7 @@ London W1W 7FE
                                             Sub Total
                                             <span>45.00</span>
                                         </li>
-                                        <li>
-                                            Discount(15%)
-                                            <span>-6.75</span>
-                                        </li>
+
                                         <li>
                                             <strong>TOTAL(EUR)</strong>
                                             <span><strong>38.25</strong></span>
@@ -169,6 +167,18 @@ London W1W 7FE
 </div>
 <script src="source/js/jquery.min.js"></script>
 <script src="source/js/main.js" type="text/javascript"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        $(document).on('change','.client-selection',function () {
+            console.log("hmm its change");
+
+            var cli_id=$(this).val();
+            console.log(cli_id);
+        });
+    });
+</script>
 </body>
 
 </html>

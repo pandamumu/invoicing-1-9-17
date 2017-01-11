@@ -23,10 +23,12 @@ Route::get('/newinvoice', function () {
     return view('pages.new-invoice');
 })->middleware('auth');
 
-
-
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
 
 Route::get('/logout', 'HomeController@index');
+
+Route::get('users', ['uses' => 'UsersController@index'] );
+
+Route::get('companies', ['uses' => 'UsersController@company'] );
