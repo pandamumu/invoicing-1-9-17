@@ -15,8 +15,8 @@ class UsersController extends Controller
 
     public function client()
     {
-        $companies = DB::table('company')->select('company', 'currency', 'id', 'address')->get();
+        $companies = DB::table('company')->select('company', 'currency', 'id_company', 'address')->get();
 
-        return view('new-invoice', compact('companies'));
+        return view('pages.new-invoice', compact('companies'));
     }
 }

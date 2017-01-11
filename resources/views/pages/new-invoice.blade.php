@@ -45,14 +45,16 @@
                                 <div class="col-md-4 col-lg-3">
                                     <div class="field-holder">
                                         <label>Client</label>
-                                        <select>
-                                            <option value="1">USSR</option>
-                                            <option value="1">JAPAN</option>
+                                        <select class="clientchoose">
+                                            @foreach($companies as $company)
+                                                <option value="{!! $company -> id_company !!}"> {!! $company -> company !!}</option>
+                                            @endforeach
                                         </select>
                                         <label>Currency</label>
                                         <select>
-                                            <option value="1">Euro-EUR</option>
-                                            <option value="1">US-USD</option>
+                                            @foreach($companies as $company)
+                                                <option value="{!! $company -> id_company !!}"> {!! $company -> currency !!}</option>
+                                            @endforeach
                                         </select>
                                     </div>
                                 </div>

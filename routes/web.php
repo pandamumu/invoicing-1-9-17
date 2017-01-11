@@ -31,4 +31,4 @@ Route::get('/logout', 'HomeController@index');
 
 Route::get('users', ['uses' => 'UsersController@index'] );
 
-Route::get('companies', ['uses' => 'UsersController@company'] );
+Route::get('companies', ['uses' => 'UsersController@client'] );
